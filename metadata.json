@@ -1,16 +1,24 @@
 {
     "mod": {
-        "id": "examplemod",
-        "group": "fuzs.examplemod",
-        "name": "Example Mod",
+        "id": "letmesleep",
+        "group": "fuzs.letmesleep",
+        "name": "Let Me Sleep",
         "version": "21.11.0",
         "authors": [
             "Fuzs"
         ],
-        "description": "Example description.",
+        "description": "Bad dreams? Configure your sleeping experience to your desires.",
         "license": "MPL-2.0"
     },
     "dependencies": [
+        {
+            "name": "neoforgedatapackextensions",
+            "type": "embedded",
+            "platforms": [
+                "fabric",
+                "neoforge"
+            ]
+        },
         {
             "name": "fabricapi",
             "type": "required",
@@ -37,7 +45,7 @@
     "links": [
         {
             "name": "github",
-            "slug": "example-mod"
+            "slug": "letmesleep"
         }
     ],
     "environments": {

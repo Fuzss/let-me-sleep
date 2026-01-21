@@ -5,4 +5,12 @@ plugins {
 dependencies {
     modApi(libs.fabricapi.fabric)
     modApi(libs.puzzleslib.fabric)
+    modApi(libs.neoforgedatapackextensions.fabric)
+    include(libs.neoforgedatapackextensions.fabric)
+}
+
+multiloader {
+    mixins {
+        mixin("ServerPlayerFabricMixin")
+    }
 }

@@ -1,0 +1,7 @@
+{
+  "values": {
+    "minecraft:speed": {
+      "duration_in_seconds": 15
+    }
+  }
+}
