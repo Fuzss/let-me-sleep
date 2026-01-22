@@ -9,19 +9,21 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 
 public record MobEffectTemplate(int durationInSeconds, int amplifier, boolean ambient) {
+    private static final int DEFAULT_DURATION = 30;
     public static final Codec<MobEffectTemplate> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
-                    ExtraCodecs.POSITIVE_INT.optionalFieldOf("duration_in_seconds", 30)
+                    ExtraCodecs.POSITIVE_INT.optionalFieldOf("duration_in_seconds", DEFAULT_DURATION)
                             .forGetter(MobEffectTemplate::durationInSeconds),
-                    ExtraCodecs.UNSIGNED_BYTE.optionalFieldOf("amplifier", 0).forGetter(MobEffectTemplate::amplifier),
+                    ExtraCodecs.UNSIGNED_BYTE.optionalFieldOf("amplifier", MobEffectInstance.MIN_AMPLIFIER)
+                            .forGetter(MobEffectTemplate::amplifier),
                     Codec.BOOL.optionalFieldOf("ambient", false).forGetter(MobEffectTemplate::ambient))
             .apply(instance, MobEffectTemplate::new));
 
     public MobEffectTemplate() {
-        this(30);
+        this(DEFAULT_DURATION);
     }
 
     public MobEffectTemplate(int durationInSeconds) {
-        this(durationInSeconds, 0);
+        this(durationInSeconds, MobEffectInstance.MIN_AMPLIFIER);
     }
 
     public MobEffectTemplate(int durationInSeconds, int amplifier) {

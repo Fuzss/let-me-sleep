@@ -25,7 +25,13 @@ abstract class CameraMixin {
             return xRot;
         }
 
-        return entity instanceof Player player ?
-                xRot + (float) Math.min(0.0, Math.pow(player.getSleepTimer() + partialTick, 2.0) * 0.008 - 45.0) : xRot;
+        if (entity instanceof Player player) {
+            float sleepTimerScale = Math.clamp((player.getSleepTimer() + partialTick) / (Player.SLEEP_DURATION * 0.65F),
+                    0.0F,
+                    1.0F);
+            return xRot - (float) Math.pow(1.0 - sleepTimerScale, 4.0) * 45.0F;
+        } else {
+            return xRot;
+        }
     }
 }

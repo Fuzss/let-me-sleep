@@ -2,13 +2,17 @@ package fuzs.letmesleep.handler;
 
 import fuzs.letmesleep.LetMeSleep;
 import fuzs.letmesleep.config.ServerConfig;
+import fuzs.letmesleep.init.ModRegistry;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Util;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.NeutralMob;
 import net.minecraft.world.entity.monster.Monster;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.pathfinder.Node;
 import net.minecraft.world.level.pathfinder.Path;
 
@@ -31,10 +35,33 @@ public class LetMeSleepHandler {
         }
     }
 
+    public static boolean isPreventingPlayerRest(Mob mob, ServerLevel serverLevel, Player player) {
+        if (mob.getType().is(ModRegistry.NEVER_PREVENTS_PLAYER_REST_ENTITY_TYPE_TAG)) {
+            return false;
+        }
+
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.ignorePersistentMonsters
+                && mob.isPersistenceRequired()) {
+            return false;
+        }
+
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.ignoreMonstersOutsideOfReach
+                && !LetMeSleepHandler.canReachTarget(mob, player)) {
+            return false;
+        }
+
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.ignoreMonstersWhenNotAngry
+                && mob instanceof NeutralMob neutralMob && !neutralMob.isAngryAt(player, serverLevel)) {
+            return false;
+        }
+
+        return true;
+    }
+
     /**
      * @see net.minecraft.world.entity.ai.goal.target.TargetGoal#canReach(LivingEntity)
      */
-    public static boolean canReachTarget(Mob mob, LivingEntity target) {
+    private static boolean canReachTarget(Mob mob, LivingEntity target) {
         Path path = mob.getNavigation().createPath(target, 0);
         if (path == null) {
             return false;

@@ -16,7 +16,7 @@ public class ServerConfig implements ConfigCore {
         @Config(description = "When trying to go to bed, remove the check if the bed has enough open space above it.")
         public boolean removeBedObstructionCheck = false;
         @Config(description = "When trying to go to bed, remove the check if monsters are nearby.")
-        public boolean removeBedMonstersNearbyCheck = true;
+        public boolean removeBedMonstersNearbyCheck = false;
         @Config(description = "Should monsters preventing the player from sleeping glow for a short time.")
         public boolean revealNearbyMonsters = true;
         @Config(description = "Should sleeping be allowed when only persistent or named monsters are nearby.")
@@ -41,7 +41,7 @@ public class ServerConfig implements ConfigCore {
                 "The amount of food levels that should be taken from the player when waking up from a bed after sleeping through the night.",
                 "A value of zero will do nothing. Negative values instead restore food levels damage to the player."
         })
-        public int hungerConsumed = 0;
+        public int hungerConsumed = 1;
         @Config(description = "Reset the weather cycle to clear weather even when the current weather is already neither rain nor thunder.")
         public boolean alwaysResetWeatherCycle = true;
         @Config(description = "The time of day players wake up at after sleeping through the night. In vanilla this defaults to zero.")

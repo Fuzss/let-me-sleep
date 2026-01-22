@@ -11,7 +11,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
-import net.minecraft.world.effect.MobEffectInstance;
 
 import java.util.Map;
 
@@ -39,9 +38,7 @@ public class WellRestedHandler {
             for (Map.Entry<ResourceKey<MobEffect>, MobEffectTemplate> entry : DataMapLookup.getDataMap(registry,
                     ModRegistry.WAKE_UP_EFFECTS_DATA_MAP_TYPE).entrySet()) {
                 registry.get(entry.getKey()).ifPresent((Holder.Reference<MobEffect> holder) -> {
-                    MobEffectInstance instance = entry.getValue().createInstance(holder);
-                    boolean b = serverPlayer.addEffect(instance);
-                    LetMeSleep.LOGGER.info("Did add effect: {}", b);
+                    serverPlayer.addEffect(entry.getValue().createInstance(holder));
                 });
             }
         }
