@@ -11,13 +11,27 @@ public class ServerConfig implements ConfigCore {
     public final WakingUp wakingUp = new WakingUp();
 
     public static class GoingToSleep implements ConfigCore {
+        @Config
+        public final BedChecks bedChecks = new BedChecks();
+        @Config
+        public final NearbyMonsters nearbyMonsters = new NearbyMonsters();
+        @Config(description = "Allows the player to wake up instantly after going to bed. Only works on multiplayer servers when all other players are already asleep.")
+        public boolean instantSleeping = false;
+        @Config(description = "Allows the player to go to bed while it's raining. In vanilla sleeping is only possible at night or during thunderstorms.")
+        public boolean allowSleepingDuringRain = true;
+    }
+
+    public static class BedChecks implements ConfigCore {
         @Config(description = "When trying to go to bed, remove the check if the player is close enough to the bed.")
-        public boolean removeBedRangeCheck = true;
+        public boolean removeRangeCheck = true;
         @Config(description = "When trying to go to bed, remove the check if the bed has enough open space above it.")
-        public boolean removeBedObstructionCheck = false;
+        public boolean removeObstructionCheck = false;
         @Config(description = "When trying to go to bed, remove the check if monsters are nearby.")
-        public boolean removeBedMonstersNearbyCheck = false;
-        @Config(description = "Should monsters preventing the player from sleeping glow for a short time.")
+        public boolean removeMonstersNearbyCheck = false;
+    }
+
+    public static class NearbyMonsters implements ConfigCore {
+        @Config(description = "Should monsters preventing the player from sleeping glow for a short time and play an ambient sound.")
         public boolean revealNearbyMonsters = true;
         @Config(description = "Should sleeping be allowed when only persistent or named monsters are nearby.")
         public boolean ignorePersistentMonsters = true;
@@ -25,10 +39,6 @@ public class ServerConfig implements ConfigCore {
         public boolean ignoreMonstersOutsideOfReach = true;
         @Config(description = "Should sleeping be allowed when only neutral monsters like enderman that are not angry at the player are nearby.")
         public boolean ignoreMonstersWhenNotAngry = true;
-        @Config(description = "Allows the player to wake up instantly after going to bed. Only works on multiplayer servers when all other players are already asleep.")
-        public boolean instantSleeping = false;
-        @Config(description = "Allows the player to go to bed while it's raining. In vanilla sleeping is only possible at night or during thunderstorms.")
-        public boolean allowSleepingDuringRain = true;
     }
 
     public static class WakingUp implements ConfigCore {

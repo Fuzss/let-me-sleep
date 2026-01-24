@@ -19,7 +19,7 @@ abstract class ServerPlayerMixin extends Player {
 
     @ModifyReturnValue(method = "isReachableBedBlock", at = @At("RETURN"))
     private boolean isReachableBedBlock(boolean isReachableBedBlock) {
-        if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.removeBedRangeCheck) {
+        if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.bedChecks.removeRangeCheck) {
             return isReachableBedBlock;
         }
 
@@ -28,7 +28,7 @@ abstract class ServerPlayerMixin extends Player {
 
     @ModifyReturnValue(method = "bedBlocked", at = @At("RETURN"))
     private boolean bedBlocked(boolean bedBlocked) {
-        if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.removeBedObstructionCheck) {
+        if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.bedChecks.removeObstructionCheck) {
             return bedBlocked;
         }
 

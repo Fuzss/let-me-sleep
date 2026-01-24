@@ -21,11 +21,11 @@ import java.util.List;
 public class LetMeSleepHandler {
 
     public static void onHandleNearbyMonsters(List<Monster> nearbyMonsters, RandomSource randomSource) {
-        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.removeBedMonstersNearbyCheck) {
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.bedChecks.removeMonstersNearbyCheck) {
             nearbyMonsters.clear();
         }
 
-        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.revealNearbyMonsters) {
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.nearbyMonsters.revealNearbyMonsters) {
             if (!nearbyMonsters.isEmpty()) {
                 Util.getRandom(nearbyMonsters, randomSource).playAmbientSound();
                 for (Monster monster : nearbyMonsters) {
@@ -40,17 +40,17 @@ public class LetMeSleepHandler {
             return false;
         }
 
-        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.ignorePersistentMonsters
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.nearbyMonsters.ignorePersistentMonsters
                 && mob.isPersistenceRequired()) {
             return false;
         }
 
-        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.ignoreMonstersOutsideOfReach
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.nearbyMonsters.ignoreMonstersOutsideOfReach
                 && !LetMeSleepHandler.canReachTarget(mob, player)) {
             return false;
         }
 
-        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.ignoreMonstersWhenNotAngry
+        if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.nearbyMonsters.ignoreMonstersWhenNotAngry
                 && mob instanceof NeutralMob neutralMob && !neutralMob.isAngryAt(player, serverLevel)) {
             return false;
         }

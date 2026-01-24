@@ -49,7 +49,7 @@
         }
     ],
     "environments": {
-        "client": "required",
+        "client": "optional",
         "server": "required"
     },
     "platforms": [
