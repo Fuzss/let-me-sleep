@@ -1,8 +1,8 @@
-package fuzs.letmesleep.mixin;
+package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.config.ServerConfig;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.config.ServerConfig;
 import net.minecraft.world.attribute.BedRule;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Final;

@@ -1,4 +1,4 @@
-package fuzs.letmesleep.world.effect;
+package fuzs.letmesleep.common.world.effect;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

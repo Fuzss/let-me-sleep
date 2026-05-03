@@ -1,9 +1,9 @@
-package fuzs.letmesleep.handler;
+package fuzs.letmesleep.common.handler;
 
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.config.ServerConfig;
-import fuzs.letmesleep.init.ModRegistry;
-import fuzs.letmesleep.world.effect.MobEffectTemplate;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.config.ServerConfig;
+import fuzs.letmesleep.common.init.ModRegistry;
+import fuzs.letmesleep.common.world.effect.MobEffectTemplate;
 import fuzs.multiloaderdataextensions.common.api.v2.DataMapLookup;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;

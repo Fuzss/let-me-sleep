@@ -1,7 +1,7 @@
-package fuzs.letmesleep.mixin;
+package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import fuzs.letmesleep.handler.LetMeSleepHandler;
+import fuzs.letmesleep.common.handler.LetMeSleepHandler;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;

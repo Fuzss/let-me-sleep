@@ -1,8 +1,8 @@
 package fuzs.letmesleep.fabric.mixin;
 
 import com.mojang.authlib.GameProfile;
-import fuzs.letmesleep.handler.LetMeSleepHandler;
-import fuzs.letmesleep.handler.WellRestedHandler;
+import fuzs.letmesleep.common.handler.LetMeSleepHandler;
+import fuzs.letmesleep.common.handler.WellRestedHandler;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;

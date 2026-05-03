@@ -1,6 +1,6 @@
 package fuzs.letmesleep.fabric;
 
-import fuzs.letmesleep.LetMeSleep;
+import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import net.fabricmc.api.ModInitializer;
 

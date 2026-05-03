@@ -1,7 +1,7 @@
-package fuzs.letmesleep.init;
+package fuzs.letmesleep.common.init;
 
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.world.effect.MobEffectTemplate;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.world.effect.MobEffectTemplate;
 import fuzs.multiloaderdataextensions.common.api.v2.DataMapRegistrar;
 import fuzs.multiloaderdataextensions.common.api.v2.DataMapToken;
 import fuzs.puzzleslib.common.api.init.v3.tags.TagFactory;

@@ -1,8 +1,8 @@
-package fuzs.letmesleep.mixin;
+package fuzs.letmesleep.common.mixin;
 
 import com.mojang.datafixers.util.Either;
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.config.ServerConfig;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.config.ServerConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Unit;
 import net.minecraft.world.entity.EntityType;

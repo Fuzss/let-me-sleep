@@ -1,4 +1,4 @@
-package fuzs.letmesleep.config;
+package fuzs.letmesleep.common.config;
 
 import fuzs.puzzleslib.common.api.config.v3.Config;
 import fuzs.puzzleslib.common.api.config.v3.ConfigCore;

@@ -1,8 +1,8 @@
-package fuzs.letmesleep.mixin;
+package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.config.ServerConfig;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.config.ServerConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.resources.ResourceKey;

@@ -1,8 +1,8 @@
-package fuzs.letmesleep;
+package fuzs.letmesleep.common;
 
-import fuzs.letmesleep.config.ClientConfig;
-import fuzs.letmesleep.config.ServerConfig;
-import fuzs.letmesleep.init.ModRegistry;
+import fuzs.letmesleep.common.config.ClientConfig;
+import fuzs.letmesleep.common.config.ServerConfig;
+import fuzs.letmesleep.common.init.ModRegistry;
 import fuzs.puzzleslib.common.api.config.v3.ConfigHolder;
 import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import net.minecraft.resources.Identifier;

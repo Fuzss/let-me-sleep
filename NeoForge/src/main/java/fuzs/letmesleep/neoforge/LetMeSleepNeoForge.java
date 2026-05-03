@@ -1,10 +1,10 @@
 package fuzs.letmesleep.neoforge;
 
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.data.tags.ModDamageTypeTagsProvider;
-import fuzs.letmesleep.data.tags.ModEntityTypeTagsProvider;
-import fuzs.letmesleep.data.tags.ModMobEffectTagsProvider;
-import fuzs.letmesleep.handler.WellRestedHandler;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.data.tags.ModDamageTypeTagsProvider;
+import fuzs.letmesleep.common.data.tags.ModEntityTypeTagsProvider;
+import fuzs.letmesleep.common.data.tags.ModMobEffectTagsProvider;
+import fuzs.letmesleep.common.handler.WellRestedHandler;
 import fuzs.letmesleep.neoforge.data.ModDataMapProvider;
 import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;

@@ -1,6 +1,6 @@
-package fuzs.letmesleep.data.tags;
+package fuzs.letmesleep.common.data.tags;
 
-import fuzs.letmesleep.init.ModRegistry;
+import fuzs.letmesleep.common.init.ModRegistry;
 import fuzs.puzzleslib.common.api.data.v2.core.DataProviderContext;
 import fuzs.puzzleslib.common.api.data.v2.tags.AbstractTagProvider;
 import net.minecraft.core.HolderLookup;

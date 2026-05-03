@@ -1,9 +1,9 @@
-package fuzs.letmesleep.mixin;
+package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.mojang.authlib.GameProfile;
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.config.ServerConfig;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.config.ServerConfig;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;

@@ -1,7 +1,7 @@
-package fuzs.letmesleep.mixin;
+package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
-import fuzs.letmesleep.init.ModRegistry;
+import fuzs.letmesleep.common.init.ModRegistry;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;

@@ -1,7 +1,7 @@
 package fuzs.letmesleep.neoforge.mixin;
 
 import com.mojang.authlib.GameProfile;
-import fuzs.letmesleep.handler.LetMeSleepHandler;
+import fuzs.letmesleep.common.handler.LetMeSleepHandler;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
@@ -19,9 +19,10 @@ abstract class ServerPlayerNeoForgeMixin extends Player {
         super(level, gameProfile);
     }
 
-    @ModifyVariable(method = "lambda$startSleepInBed$15", at = @At("STORE"))
-    public List<Monster> startSleepInBed(List<Monster> list) {
-        LetMeSleepHandler.onHandleNearbyMonsters(list, this.getRandom());
-        return list;
+    @SuppressWarnings({"MixinAnnotationTarget", "InvalidInjectorMethodSignature"})
+    @ModifyVariable(method = "lambda$startSleepInBed$0", at = @At("STORE"))
+    public List<Monster> startSleepInBed(List<Monster> monsters) {
+        LetMeSleepHandler.onHandleNearbyMonsters(monsters, this.getRandom());
+        return monsters;
     }
 }

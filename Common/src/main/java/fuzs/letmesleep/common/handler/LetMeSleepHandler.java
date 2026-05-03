@@ -1,8 +1,8 @@
-package fuzs.letmesleep.handler;
+package fuzs.letmesleep.common.handler;
 
-import fuzs.letmesleep.LetMeSleep;
-import fuzs.letmesleep.config.ServerConfig;
-import fuzs.letmesleep.init.ModRegistry;
+import fuzs.letmesleep.common.LetMeSleep;
+import fuzs.letmesleep.common.config.ServerConfig;
+import fuzs.letmesleep.common.init.ModRegistry;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Util;
@@ -20,15 +20,15 @@ import java.util.List;
 
 public class LetMeSleepHandler {
 
-    public static void onHandleNearbyMonsters(List<Monster> nearbyMonsters, RandomSource randomSource) {
+    public static void onHandleNearbyMonsters(List<Monster> monsters, RandomSource randomSource) {
         if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.bedChecks.removeMonstersNearbyCheck) {
-            nearbyMonsters.clear();
+            monsters.clear();
         }
 
         if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.nearbyMonsters.revealNearbyMonsters) {
-            if (!nearbyMonsters.isEmpty()) {
-                Util.getRandom(nearbyMonsters, randomSource).playAmbientSound();
-                for (Monster monster : nearbyMonsters) {
+            if (!monsters.isEmpty()) {
+                Util.getRandom(monsters, randomSource).playAmbientSound();
+                for (Monster monster : monsters) {
                     monster.addEffect(new MobEffectInstance(MobEffects.GLOWING, 60));
                 }
             }

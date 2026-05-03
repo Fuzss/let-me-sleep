@@ -14,4 +14,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - Remove the `wake_up_time` config option as it can now be controlled via the new timelines in vanilla
-- 
