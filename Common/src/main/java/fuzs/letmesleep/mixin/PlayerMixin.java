@@ -25,7 +25,7 @@ abstract class PlayerMixin extends LivingEntity {
     }
 
     @Inject(method = "startSleepInBed", at = @At("TAIL"))
-    public void startSleepInBed(BlockPos bedPos, CallbackInfoReturnable<Either<Player.BedSleepingProblem, Unit>> callback) {
+    public void startSleepInBed(BlockPos pos, CallbackInfoReturnable<Either<Player.BedSleepingProblem, Unit>> callback) {
         if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.instantSleeping) {
             return;
         }

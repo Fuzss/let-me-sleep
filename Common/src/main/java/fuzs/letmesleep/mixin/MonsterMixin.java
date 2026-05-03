@@ -19,7 +19,7 @@ abstract class MonsterMixin extends PathfinderMob {
     }
 
     @ModifyReturnValue(method = "isPreventingPlayerRest", at = @At("RETURN"))
-    public boolean isPreventingPlayerRest(boolean isPreventingPlayerRest, ServerLevel serverLevel, Player player) {
-        return isPreventingPlayerRest && LetMeSleepHandler.isPreventingPlayerRest(this, serverLevel, player);
+    public boolean isPreventingPlayerRest(boolean isPreventingPlayerRest, ServerLevel level, Player player) {
+        return isPreventingPlayerRest && LetMeSleepHandler.isPreventingPlayerRest(this, level, player);
     }
 }

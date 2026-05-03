@@ -6,7 +6,7 @@ import fuzs.letmesleep.data.tags.ModEntityTypeTagsProvider;
 import fuzs.letmesleep.data.tags.ModMobEffectTagsProvider;
 import fuzs.letmesleep.handler.WellRestedHandler;
 import fuzs.letmesleep.neoforge.data.ModDataMapProvider;
-import fuzs.puzzleslib.api.core.v1.ModConstructor;
+import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
 import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.IEventBus;

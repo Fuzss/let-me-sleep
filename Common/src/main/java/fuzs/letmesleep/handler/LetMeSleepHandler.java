@@ -36,7 +36,7 @@ public class LetMeSleepHandler {
     }
 
     public static boolean isPreventingPlayerRest(Mob mob, ServerLevel serverLevel, Player player) {
-        if (mob.getType().is(ModRegistry.NEVER_PREVENTS_PLAYER_REST_ENTITY_TYPE_TAG)) {
+        if (mob.is(ModRegistry.NEVER_PREVENTS_PLAYER_REST_ENTITY_TYPE_TAG)) {
             return false;
         }
 

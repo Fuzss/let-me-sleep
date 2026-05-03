@@ -4,7 +4,7 @@ import fuzs.letmesleep.LetMeSleep;
 import fuzs.letmesleep.config.ServerConfig;
 import fuzs.letmesleep.init.ModRegistry;
 import fuzs.letmesleep.world.effect.MobEffectTemplate;
-import fuzs.neoforgedatapackextensions.api.v2.DataMapLookup;
+import fuzs.multiloaderdataextensions.common.api.v2.DataMapLookup;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;

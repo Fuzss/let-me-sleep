@@ -11,10 +11,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.storage.WritableLevelData;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ServerLevel.class)
 abstract class ServerLevelMixin extends Level {
@@ -29,17 +26,6 @@ abstract class ServerLevelMixin extends Level {
                 biomeZoomSeed,
                 maxChainedNeighborUpdates);
     }
-
-    @Inject(method = "tick",
-            at = @At(value = "INVOKE",
-                     target = "Lnet/minecraft/server/level/ServerLevel;setDayTime(J)V",
-                     shift = At.Shift.AFTER))
-    public void tick(CallbackInfo callback) {
-        this.setDayTime(this.getDayTime() + LetMeSleep.CONFIG.get(ServerConfig.class).wakingUp.wakeUpTime);
-    }
-
-    @Shadow
-    public abstract void setDayTime(long time);
 
     @ModifyExpressionValue(method = "tick",
                            at = @At(value = "INVOKE", target = "Lnet/minecraft/server/level/ServerLevel;isRaining()Z"))

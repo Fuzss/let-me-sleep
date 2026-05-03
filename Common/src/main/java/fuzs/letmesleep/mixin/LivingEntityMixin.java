@@ -20,7 +20,7 @@ abstract class LivingEntityMixin extends Entity {
 
     @WrapWithCondition(method = "hurtServer",
                        at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;stopSleeping()V"))
-    public boolean hurtServer(LivingEntity livingEntity, ServerLevel serverLevel, DamageSource damageSource, float damageAmount) {
-        return !damageSource.is(ModRegistry.NO_SLEEPING_INTERRUPTION_DAMAGE_TYPE_TAG);
+    public boolean hurtServer(LivingEntity livingEntity, ServerLevel level, DamageSource source, float damage) {
+        return !source.is(ModRegistry.NO_SLEEPING_INTERRUPTION_DAMAGE_TYPE_TAG);
     }
 }

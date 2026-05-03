@@ -1,8 +1,7 @@
 package fuzs.letmesleep.config;
 
-import fuzs.puzzleslib.api.config.v3.Config;
-import fuzs.puzzleslib.api.config.v3.ConfigCore;
-import net.minecraft.SharedConstants;
+import fuzs.puzzleslib.common.api.config.v3.Config;
+import fuzs.puzzleslib.common.api.config.v3.ConfigCore;
 
 public class ServerConfig implements ConfigCore {
     @Config
@@ -54,8 +53,5 @@ public class ServerConfig implements ConfigCore {
         public int hungerConsumed = 1;
         @Config(description = "Reset the weather cycle to clear weather even when the current weather is already neither rain nor thunder.")
         public boolean alwaysResetWeatherCycle = true;
-        @Config(description = "The time of day players wake up at after sleeping through the night. In vanilla this defaults to zero.")
-        @Config.IntRange(min = 0, max = SharedConstants.TICKS_PER_GAME_DAY)
-        public int wakeUpTime = 0;
     }
 }

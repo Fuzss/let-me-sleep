@@ -2,9 +2,9 @@ package fuzs.letmesleep.init;
 
 import fuzs.letmesleep.LetMeSleep;
 import fuzs.letmesleep.world.effect.MobEffectTemplate;
-import fuzs.neoforgedatapackextensions.api.v1.DataMapToken;
-import fuzs.neoforgedatapackextensions.api.v2.DataMapRegistrar;
-import fuzs.puzzleslib.api.init.v3.tags.TagFactory;
+import fuzs.multiloaderdataextensions.common.api.v2.DataMapRegistrar;
+import fuzs.multiloaderdataextensions.common.api.v2.DataMapToken;
+import fuzs.puzzleslib.common.api.init.v3.tags.TagFactory;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
