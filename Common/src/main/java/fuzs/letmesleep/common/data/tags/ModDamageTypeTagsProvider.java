@@ -17,7 +17,7 @@ public class ModDamageTypeTagsProvider extends AbstractTagProvider<DamageType> {
     @Override
     public void addTags(HolderLookup.Provider provider) {
         this.tag(ModRegistry.NO_SLEEPING_INTERRUPTION_DAMAGE_TYPE_TAG)
-                .addKey(DamageTypes.MAGIC)
-                .addKey(DamageTypes.INDIRECT_MAGIC);
+                .add(DamageTypes.MAGIC)
+                .add(DamageTypes.INDIRECT_MAGIC);
     }
 }

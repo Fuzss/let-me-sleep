@@ -1,14 +1,14 @@
 {
-    "minecraft": "26.1.2",
+    "minecraft": "26.2",
     "mod": {
         "id": "letmesleep",
         "group": "fuzs.letmesleep",
         "name": "Let Me Sleep",
-        "version": "26.1.0",
+        "version": "26.2.0",
         "authors": [
             "Fuzs"
         ],
-        "description": "Bad dreams? Configure your sleeping experience to your desires.",
+        "description": "Monsters are keeping you awake? Customize sleeping, waking, and bed mechanics freely.",
         "license": "MPL-2.0"
     },
     "dependencies": [
@@ -45,8 +45,18 @@
     ],
     "links": [
         {
+            "name": "curseforge",
+            "slug": "let-me-sleep",
+            "id": "322764"
+        },
+        {
             "name": "github",
             "slug": "let-me-sleep"
+        },
+        {
+            "name": "modrinth",
+            "slug": "new-let-me-sleep",
+            "id": "KK4HJa9m"
         }
     ],
     "environments": {
