@@ -3,6 +3,7 @@ package fuzs.letmesleep.common.handler;
 import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.letmesleep.common.config.ServerConfig;
 import fuzs.letmesleep.common.init.ModRegistry;
+import fuzs.puzzleslib.api.event.v1.core.EventResult;
 import net.minecraft.Util;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -74,5 +75,17 @@ public class LetMeSleepHandler {
                 return deltaX * deltaX + deltaZ * deltaZ <= 2.25;
             }
         }
+    }
+
+    public static EventResult onLivingStopSleeping(LivingEntity entity) {
+        if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.allowSleepingDuringRain) {
+            return EventResult.PASS;
+        }
+
+        if (!(entity instanceof Player player)) {
+            return EventResult.PASS;
+        }
+
+        return player.level().isDay() && player.level().isRaining() ? EventResult.DENY : EventResult.PASS;
     }
 }

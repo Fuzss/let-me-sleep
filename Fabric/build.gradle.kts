@@ -11,6 +11,6 @@ dependencies {
 
 multiloader {
     mixins {
-        mixin("ServerPlayerFabricMixin")
+        mixin("PlayerFabricMixin", "ServerPlayerFabricMixin")
     }
 }
