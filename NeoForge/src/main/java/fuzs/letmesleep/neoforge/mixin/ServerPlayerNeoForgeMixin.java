@@ -19,7 +19,6 @@ abstract class ServerPlayerNeoForgeMixin extends Player {
         super(level, gameProfile);
     }
 
-    @SuppressWarnings({"MixinAnnotationTarget", "InvalidInjectorMethodSignature"})
     @ModifyVariable(method = "lambda$startSleepInBed$0", at = @At("STORE"))
     public List<Monster> startSleepInBed(List<Monster> monsters) {
         LetMeSleepHandler.onHandleNearbyMonsters(monsters, this.getRandom());
