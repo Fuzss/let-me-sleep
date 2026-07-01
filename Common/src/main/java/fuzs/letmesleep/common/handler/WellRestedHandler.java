@@ -4,15 +4,12 @@ import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.letmesleep.common.config.ServerConfig;
 import fuzs.letmesleep.common.init.ModRegistry;
 import fuzs.letmesleep.common.world.effect.MobEffectTemplate;
-import fuzs.multiloaderdataextensions.common.api.v2.DataMapLookup;
+import fuzs.neoforgedatapackextensions.api.v1.DataMapRegistry;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffect;
-
-import java.util.Map;
 
 public class WellRestedHandler {
 
@@ -22,7 +19,7 @@ public class WellRestedHandler {
             if (restoredHealth > 0) {
                 serverPlayer.heal(restoredHealth);
             } else if (restoredHealth < 0) {
-                serverPlayer.hurtServer(serverPlayer.level(), serverPlayer.damageSources().magic(), restoredHealth);
+                serverPlayer.hurt(serverPlayer.damageSources().magic(), restoredHealth);
             }
 
             int consumedHunger = LetMeSleep.CONFIG.get(ServerConfig.class).wakingUp.hungerConsumed;
@@ -32,15 +29,16 @@ public class WellRestedHandler {
                 serverPlayer.getFoodData().eat(-consumedHunger, 0.0F);
             }
 
-            Registry<MobEffect> registry = serverPlayer.registryAccess().lookupOrThrow(Registries.MOB_EFFECT);
+            Registry<MobEffect> registry = serverPlayer.registryAccess().registryOrThrow(Registries.MOB_EFFECT);
             registry.getTagOrEmpty(ModRegistry.CLEARED_WHEN_WAKING_UP_MOB_EFFECT_TAG)
                     .forEach(serverPlayer::removeEffect);
-            for (Map.Entry<ResourceKey<MobEffect>, MobEffectTemplate> entry : DataMapLookup.getDataMap(registry,
-                    ModRegistry.WAKE_UP_EFFECTS_DATA_MAP_TYPE).entrySet()) {
-                registry.get(entry.getKey()).ifPresent((Holder.Reference<MobEffect> holder) -> {
-                    serverPlayer.addEffect(entry.getValue().createInstance(holder));
-                });
-            }
+            registry.holders().forEach((Holder.Reference<MobEffect> holder) -> {
+                MobEffectTemplate template = DataMapRegistry.INSTANCE.getData(ModRegistry.WAKE_UP_EFFECTS_DATA_MAP_TYPE,
+                        holder);
+                if (template != null) {
+                    serverPlayer.addEffect(template.createInstance(holder));
+                }
+            });
         }
     }
 }

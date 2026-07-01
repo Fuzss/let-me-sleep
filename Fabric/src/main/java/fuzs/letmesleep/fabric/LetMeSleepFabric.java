@@ -1,7 +1,7 @@
 package fuzs.letmesleep.fabric;
 
 import fuzs.letmesleep.common.LetMeSleep;
-import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
+import fuzs.puzzleslib.api.core.v1.ModConstructor;
 import net.fabricmc.api.ModInitializer;
 
 public class LetMeSleepFabric implements ModInitializer {

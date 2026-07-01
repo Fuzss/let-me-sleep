@@ -2,7 +2,6 @@ package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import fuzs.letmesleep.common.handler.LetMeSleepHandler;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.monster.Monster;
@@ -19,7 +18,7 @@ abstract class MonsterMixin extends PathfinderMob {
     }
 
     @ModifyReturnValue(method = "isPreventingPlayerRest", at = @At("RETURN"))
-    public boolean isPreventingPlayerRest(boolean isPreventingPlayerRest, ServerLevel level, Player player) {
-        return isPreventingPlayerRest && LetMeSleepHandler.isPreventingPlayerRest(this, level, player);
+    public boolean isPreventingPlayerRest(boolean isPreventingPlayerRest, Player player) {
+        return isPreventingPlayerRest && LetMeSleepHandler.isPreventingPlayerRest(this, player);
     }
 }

@@ -4,13 +4,12 @@ plugins {
 
 dependencies {
     modCompileOnlyApi(sharedLibs.puzzleslib.common)
-    modCompileOnlyApi(sharedLibs.multiloaderdataextensions.common)
+    compileOnlyApi(sharedLibs.neoforgedatapackextensions.common)
 }
 
 multiloader {
     mixins {
         mixin(
-            "BedRule\$RuleMixin",
             "LivingEntityMixin",
             "MonsterMixin",
             "PlayerMixin",

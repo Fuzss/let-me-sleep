@@ -2,7 +2,6 @@ package fuzs.letmesleep.common.mixin;
 
 import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import fuzs.letmesleep.common.init.ModRegistry;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -18,9 +17,9 @@ abstract class LivingEntityMixin extends Entity {
         super(entityType, level);
     }
 
-    @WrapWithCondition(method = "hurtServer",
+    @WrapWithCondition(method = "hurt",
                        at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;stopSleeping()V"))
-    public boolean hurtServer(LivingEntity livingEntity, ServerLevel level, DamageSource source, float damage) {
+    public boolean hurt(LivingEntity livingEntity, DamageSource source, float damage) {
         return !source.is(ModRegistry.NO_SLEEPING_INTERRUPTION_DAMAGE_TYPE_TAG);
     }
 }

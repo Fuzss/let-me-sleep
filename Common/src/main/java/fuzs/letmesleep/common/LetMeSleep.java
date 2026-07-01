@@ -3,9 +3,9 @@ package fuzs.letmesleep.common;
 import fuzs.letmesleep.common.config.ClientConfig;
 import fuzs.letmesleep.common.config.ServerConfig;
 import fuzs.letmesleep.common.init.ModRegistry;
-import fuzs.puzzleslib.common.api.config.v3.ConfigHolder;
-import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
-import net.minecraft.resources.Identifier;
+import fuzs.puzzleslib.api.config.v3.ConfigHolder;
+import fuzs.puzzleslib.api.core.v1.ModConstructor;
+import net.minecraft.resources.ResourceLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +23,7 @@ public class LetMeSleep implements ModConstructor {
         ModRegistry.bootstrap();
     }
 
-    public static Identifier id(String path) {
-        return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    public static ResourceLocation id(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }

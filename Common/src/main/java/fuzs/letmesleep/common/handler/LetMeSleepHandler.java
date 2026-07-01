@@ -3,9 +3,8 @@ package fuzs.letmesleep.common.handler;
 import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.letmesleep.common.config.ServerConfig;
 import fuzs.letmesleep.common.init.ModRegistry;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.Util;
 import net.minecraft.util.RandomSource;
-import net.minecraft.util.Util;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -35,8 +34,8 @@ public class LetMeSleepHandler {
         }
     }
 
-    public static boolean isPreventingPlayerRest(Mob mob, ServerLevel serverLevel, Player player) {
-        if (mob.is(ModRegistry.NEVER_PREVENTS_PLAYER_REST_ENTITY_TYPE_TAG)) {
+    public static boolean isPreventingPlayerRest(Mob mob, Player player) {
+        if (mob.getType().is(ModRegistry.NEVER_PREVENTS_PLAYER_REST_ENTITY_TYPE_TAG)) {
             return false;
         }
 
@@ -51,7 +50,7 @@ public class LetMeSleepHandler {
         }
 
         if (LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.nearbyMonsters.ignoreMonstersWhenNotAngry
-                && mob instanceof NeutralMob neutralMob && !neutralMob.isAngryAt(player, serverLevel)) {
+                && mob instanceof NeutralMob neutralMob && !neutralMob.isAngryAt(player)) {
             return false;
         }
 

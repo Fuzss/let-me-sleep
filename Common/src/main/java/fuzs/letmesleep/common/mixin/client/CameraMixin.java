@@ -6,7 +6,7 @@ import fuzs.letmesleep.common.config.ClientConfig;
 import net.minecraft.client.Camera;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
-import org.jspecify.annotations.Nullable;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -19,12 +19,12 @@ abstract class CameraMixin {
     @Nullable
     private Entity entity;
 
-    @ModifyArg(method = "alignWithEntity",
+    @ModifyArg(method = "setup",
                at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Camera;setRotation(FF)V"),
                index = 1,
                slice = @Slice(from = @At(value = "INVOKE",
                                          target = "Lnet/minecraft/world/entity/LivingEntity;getBedOrientation()Lnet/minecraft/core/Direction;")))
-    public float alignWithEntity(float xRot, @Local(argsOnly = true) float partialTicks) {
+    public float setup(float xRot, @Local(argsOnly = true) float partialTicks) {
         if (!LetMeSleep.CONFIG.get(ClientConfig.class).fallingAsleepAnimation) {
             return xRot;
         }

@@ -2,7 +2,7 @@ package fuzs.letmesleep.fabric.client;
 
 import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.letmesleep.common.client.LetMeSleepClient;
-import fuzs.puzzleslib.common.api.client.core.v1.ClientModConstructor;
+import fuzs.puzzleslib.api.client.core.v1.ClientModConstructor;
 import net.fabricmc.api.ClientModInitializer;
 
 public class LetMeSleepFabricClient implements ClientModInitializer {
