@@ -1,8 +1,15 @@
 {
   "branches": {
+    "1.21.1": "maintained",
     "1.21.11": "archived",
     "26.1.x": "maintained",
-    "26.2.x": "primary",
-    "1.21.1": "maintained"
+    "26.2.x": "primary"
+  },
+  "properties": {
+    "distributions.curseforge.id": "322764",
+    "distributions.curseforge.slug": "let-me-sleep",
+    "distributions.github.slug": "let-me-sleep",
+    "distributions.modrinth.id": "KK4HJa9m",
+    "distributions.modrinth.slug": "new-let-me-sleep"
   }
 }
