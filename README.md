@@ -2,34 +2,38 @@
 
 ### Minecraft 26.x
 
-| Branch | Status | Changelog |
-| --- | --- | --- |
-| [26.2.x](https://github.com/Fuzss/let-me-sleep/tree/26.2.x) | ✅&nbsp;Primary | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/26.2.x/CHANGELOG.md) |
-| [26.1.x](https://github.com/Fuzss/let-me-sleep/tree/26.1.x) | ✅&nbsp;Maintained | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/26.1.x/CHANGELOG.md) |
+| Branch | History | Status | Changelog | Fabric | NeoForge |
+| --- | --- | --- | --- | --- | --- |
+| [26.2.x](https://github.com/Fuzss/let-me-sleep/tree/26.2.x) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/26.2.x) | ✅&nbsp;Primary | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/26.2.x/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=26.2&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=26.2&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=26.2&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=26.2&l=neoforge) |
+
+| Branch | History | Status | Changelog |
+| --- | --- | --- | --- |
+| [26.1.x](https://github.com/Fuzss/let-me-sleep/tree/26.1.x) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/26.1.x) | ✅&nbsp;Maintained | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/26.1.x/CHANGELOG.md) |
 
 ### Minecraft 1.21.x
 
-| Branch | Status | Changelog | Fabric | NeoForge |
-| --- | --- | --- | --- | --- |
-| [1.21.11](https://github.com/Fuzss/let-me-sleep/tree/1.21.11) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.21.11/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=1.21.11&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=1.21.11&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=1.21.11&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=1.21.11&l=neoforge) |
+| Branch | History | Status | Changelog | Fabric | NeoForge |
+| --- | --- | --- | --- | --- | --- |
+| [1.21.11](https://github.com/Fuzss/let-me-sleep/tree/1.21.11) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/1.21.11) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.21.11/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=1.21.11&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=1.21.11&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=1.21.11&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=1.21.11&l=neoforge) |
+| [1.21.1](https://github.com/Fuzss/let-me-sleep/tree/1.21.1) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/1.21.1) | ✅&nbsp;Maintained | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.21.1/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=1.21.1&gameVersionTypeId=4)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=1.21.1&l=fabric) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/minecraft/mc-mods/let-me-sleep/files/all?version=1.21.1&gameVersionTypeId=6)<br /> <img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/mod/new-let-me-sleep/versions?g=1.21.1&l=neoforge) |
 
 ### Minecraft 1.16.x
 
-| Branch | Status | Changelog | Downloads |
-| --- | --- | --- | --- |
-| [1.16.5](https://github.com/Fuzss/let-me-sleep/tree/1.16.5) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.16.5/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| Branch | History | Status | Changelog | Downloads |
+| --- | --- | --- | --- | --- |
+| [1.16.5](https://github.com/Fuzss/let-me-sleep/tree/1.16.5) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/1.16.5) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.16.5/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
 ### Minecraft 1.14.x
 
-| Branch | Status | Changelog | Downloads |
-| --- | --- | --- | --- |
-| [1.14.4](https://github.com/Fuzss/let-me-sleep/tree/1.14.4) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.14.4/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| Branch | History | Status | Changelog | Downloads |
+| --- | --- | --- | --- | --- |
+| [1.14.4](https://github.com/Fuzss/let-me-sleep/tree/1.14.4) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/1.14.4) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.14.4/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
 ### Minecraft 1.12.x
 
-| Branch | Status | Changelog | Downloads |
-| --- | --- | --- | --- |
-| [1.12.2](https://github.com/Fuzss/let-me-sleep/tree/1.12.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.12.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
+| Branch | History | Status | Changelog | Downloads |
+| --- | --- | --- | --- | --- |
+| [1.12.2](https://github.com/Fuzss/let-me-sleep/tree/1.12.2) | [Commits](https://github.com/Fuzss/let-me-sleep/commits/1.12.2) | ❌&nbsp;Archived | [CHANGELOG.md](https://github.com/Fuzss/let-me-sleep/blob/1.12.2/CHANGELOG.md) | <img src="https://cdn.simpleicons.org/curseforge" width="14" />&nbsp;[CurseForge](https://www.curseforge.com/members/fuzs_/projects)<br /><img src="https://cdn.simpleicons.org/modrinth" width="14" />&nbsp;[Modrinth](https://modrinth.com/user/Fuzs) |
 
 ---
 
