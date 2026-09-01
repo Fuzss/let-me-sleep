@@ -5,11 +5,17 @@
     "26.1.x": "maintained",
     "26.2.x": "primary"
   },
-  "properties": {
-    "distributions.curseforge.id": "322764",
-    "distributions.curseforge.slug": "let-me-sleep",
-    "distributions.github.slug": "let-me-sleep",
-    "distributions.modrinth.id": "KK4HJa9m",
-    "distributions.modrinth.slug": "new-let-me-sleep"
+  "distributions": {
+    "curseforge": {
+      "id": "322764",
+      "slug": "let-me-sleep"
+    },
+    "github": {
+      "slug": "let-me-sleep"
+    },
+    "modrinth": {
+      "id": "KK4HJa9m",
+      "slug": "new-let-me-sleep"
+    }
   }
 }
