@@ -2,6 +2,7 @@ package fuzs.letmesleep.neoforge;
 
 import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.letmesleep.common.data.tags.ModDamageTypeTagsProvider;
+import fuzs.letmesleep.common.data.tags.ModDimensionTypeTagsProvider;
 import fuzs.letmesleep.common.data.tags.ModEntityTypeTagsProvider;
 import fuzs.letmesleep.common.data.tags.ModMobEffectTagsProvider;
 import fuzs.letmesleep.common.handler.WellRestedHandler;
@@ -21,8 +22,9 @@ public class LetMeSleepNeoForge {
         ModConstructor.construct(LetMeSleep.MOD_ID, LetMeSleep::new);
         registerEventHandlers(NeoForge.EVENT_BUS);
         DataProviderBuilder.of(LetMeSleep.MOD_ID)
-                .addProvider(ModEntityTypeTagsProvider::new,
-                        ModDamageTypeTagsProvider::new,
+                .addProvider(ModDamageTypeTagsProvider::new,
+                        ModDimensionTypeTagsProvider::new,
+                        ModEntityTypeTagsProvider::new,
                         ModMobEffectTagsProvider::new,
                         ModDataMapProvider::new);
     }

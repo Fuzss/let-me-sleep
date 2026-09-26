@@ -10,6 +10,6 @@ dependencies {
 
 multiloader {
     mixins {
-        mixin("ServerPlayerNeoForgeMixin")
+        mixin("EnvironmentAttributeSystemNeoForgeMixin", "ServerPlayerNeoForgeMixin")
     }
 }

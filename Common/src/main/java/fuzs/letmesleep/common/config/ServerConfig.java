@@ -2,6 +2,7 @@ package fuzs.letmesleep.common.config;
 
 import fuzs.puzzleslib.common.api.config.v3.Config;
 import fuzs.puzzleslib.common.api.config.v3.ConfigCore;
+import net.minecraft.world.attribute.BedRule;
 
 public class ServerConfig implements ConfigCore {
     @Config
@@ -12,6 +13,10 @@ public class ServerConfig implements ConfigCore {
     public static class GoingToSleep implements ConfigCore {
         @Config
         public final BedChecks bedChecks = new BedChecks();
+        @Config
+        public final BedRules normalBedRules = new BedRules(BedRule.CAN_SLEEP_WHEN_DARK);
+        @Config
+        public final StrawBedRules strawBedRules = new StrawBedRules(BedRule.DESTROY_ON_LEAVE);
         @Config
         public final NearbyMonsters nearbyMonsters = new NearbyMonsters();
         @Config(description = "Allows the player to wake up instantly after going to bed. Only works on multiplayer servers when all other players are already asleep.")
@@ -27,6 +32,31 @@ public class ServerConfig implements ConfigCore {
         public boolean removeObstructionCheck = false;
         @Config(description = "When trying to go to bed, remove the check if monsters are nearby.")
         public boolean removeMonstersNearbyCheck = false;
+    }
+
+    public static class BedRules implements ConfigCore {
+        @Config(description = "Controls when a player is allowed to sleep in a bed in dimensions where sleeping is allowed.",
+                worldRestart = true)
+        public BedRule.Rule canSleep;
+        @Config(description = "Controls when using a bed sets the player's respawn point in dimensions where sleeping is allowed.",
+                worldRestart = true)
+        public BedRule.Rule canSetSpawn;
+
+        public BedRules(BedRule baseRule) {
+            this.canSleep = baseRule.canSleep();
+            this.canSetSpawn = baseRule.canSetSpawn();
+        }
+    }
+
+    public static class StrawBedRules extends BedRules {
+        @Config(description = "Should a bed be destroyed when the player leaves it regardless of actually sleeping.",
+                worldRestart = true)
+        public boolean destroyOnLeave;
+
+        public StrawBedRules(BedRule baseRule) {
+            super(baseRule);
+            this.destroyOnLeave = baseRule.destroyOnLeave();
+        }
     }
 
     public static class NearbyMonsters implements ConfigCore {

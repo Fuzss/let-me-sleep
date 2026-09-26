@@ -10,6 +10,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageType;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.level.dimension.DimensionType;
 
 public class ModRegistry {
     static final TagFactory TAGS = TagFactory.make(LetMeSleep.MOD_ID);
@@ -19,6 +20,8 @@ public class ModRegistry {
             "no_sleeping_interruption");
     public static final TagKey<MobEffect> CLEARED_WHEN_WAKING_UP_MOB_EFFECT_TAG = TAGS.registerTagKey(Registries.MOB_EFFECT,
             "cleared_when_waking_up");
+    public static final TagKey<DimensionType> OVERRIDES_BED_RULE_DIMENSION_TYPE_TAG = TAGS.registerTagKey(Registries.DIMENSION_TYPE,
+            "overrides_bed_rule");
 
     public static final DataMapToken<MobEffect, MobEffectTemplate> WAKE_UP_EFFECTS_DATA_MAP_TYPE = DataMapRegistrar.register(
             LetMeSleep.id("wake_up_effects"),
