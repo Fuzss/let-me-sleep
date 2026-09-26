@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [v26.3.0-mc26.3.x] - 2026-09-24
 
+### Added
+
+- Add config options for customizing vanilla bed rules
+
 ### Changed
 
 - Update to Minecraft 26.3.x
