@@ -23,13 +23,13 @@ abstract class ServerPlayerFabricMixin extends Player {
     }
 
     @ModifyVariable(method = "startSleepInBed", at = @At("STORE"))
-    public List<Monster> startSleepInBed(List<Monster> list) {
-        LetMeSleepHandler.onHandleNearbyMonsters(list, this.getRandom());
-        return list;
+    public List<Monster> startSleepInBed(List<Monster> monsters) {
+        LetMeSleepHandler.onHandleNearbyMonsters(monsters, this.getRandom());
+        return monsters;
     }
 
     @Inject(method = "stopSleepInBed", at = @At("HEAD"))
-    public void stopSleepInBed(boolean wakeImmediately, boolean updateLevelForSleepingPlayers, CallbackInfo callback) {
-        WellRestedHandler.onPlayerWakeUp(ServerPlayer.class.cast(this), wakeImmediately, updateLevelForSleepingPlayers);
+    public void stopSleepInBed(boolean forcefulWakeUp, boolean updateLevelList, CallbackInfo callback) {
+        WellRestedHandler.onPlayerWakeUp(ServerPlayer.class.cast(this), forcefulWakeUp, updateLevelList);
     }
 }

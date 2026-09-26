@@ -5,10 +5,13 @@ import fuzs.letmesleep.common.LetMeSleep;
 import fuzs.letmesleep.common.config.ServerConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.Unit;
+import net.minecraft.world.attribute.BedRule;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.AbstractBedBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -25,7 +28,7 @@ abstract class PlayerMixin extends LivingEntity {
     }
 
     @Inject(method = "startSleepInBed", at = @At("TAIL"))
-    public void startSleepInBed(BlockPos pos, CallbackInfoReturnable<Either<Player.BedSleepingProblem, Unit>> callback) {
+    public void startSleepInBed(AbstractBedBlock bedBlock, BlockState bedBlockState, BedRule rule, BlockPos pos, CallbackInfoReturnable<Either<Player.BedSleepingProblem, Unit>> callback) {
         if (!LetMeSleep.CONFIG.get(ServerConfig.class).goingToSleep.instantSleeping) {
             return;
         }

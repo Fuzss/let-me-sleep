@@ -19,7 +19,7 @@ abstract class ServerPlayerNeoForgeMixin extends Player {
         super(level, gameProfile);
     }
 
-    @ModifyVariable(method = "lambda$startSleepInBed$0", at = @At("STORE"))
+    @ModifyVariable(method = "startSleepInBed", at = @At("STORE"))
     public List<Monster> startSleepInBed(List<Monster> monsters) {
         LetMeSleepHandler.onHandleNearbyMonsters(monsters, this.getRandom());
         return monsters;

@@ -7,7 +7,7 @@ import fuzs.letmesleep.common.data.tags.ModMobEffectTagsProvider;
 import fuzs.letmesleep.common.handler.WellRestedHandler;
 import fuzs.letmesleep.neoforge.data.ModDataMapProvider;
 import fuzs.puzzleslib.common.api.core.v1.ModConstructor;
-import fuzs.puzzleslib.neoforge.api.data.v2.core.DataProviderHelper;
+import fuzs.puzzleslib.neoforge.api.data.v3.core.DataProviderBuilder;
 import net.minecraft.server.level.ServerPlayer;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
@@ -20,11 +20,11 @@ public class LetMeSleepNeoForge {
     public LetMeSleepNeoForge() {
         ModConstructor.construct(LetMeSleep.MOD_ID, LetMeSleep::new);
         registerEventHandlers(NeoForge.EVENT_BUS);
-        DataProviderHelper.registerDataProviders(LetMeSleep.MOD_ID,
-                ModEntityTypeTagsProvider::new,
-                ModDamageTypeTagsProvider::new,
-                ModMobEffectTagsProvider::new,
-                ModDataMapProvider::new);
+        DataProviderBuilder.of(LetMeSleep.MOD_ID)
+                .addProvider(ModEntityTypeTagsProvider::new,
+                        ModDamageTypeTagsProvider::new,
+                        ModMobEffectTagsProvider::new,
+                        ModDataMapProvider::new);
     }
 
     private static void registerEventHandlers(IEventBus eventBus) {
